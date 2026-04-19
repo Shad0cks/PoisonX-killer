@@ -292,8 +292,6 @@ int main(int argc, char* argv[])
 		char inputBuffer[16];
         sprintf_s(inputBuffer, sizeof(inputBuffer), "%d", 2188); 
 
-        printf("[*] Trying to kill process with PID: %s\n", inputBuffer);
-
         HANDLE hDevice = CreateFileW(DEVICE_NAME, GENERIC_READ | GENERIC_WRITE, 0, nullptr, OPEN_EXISTING, 0, nullptr);
         if (hDevice == INVALID_HANDLE_VALUE) {
             printf("[-] Error while opening device: %lu\n", GetLastError());
